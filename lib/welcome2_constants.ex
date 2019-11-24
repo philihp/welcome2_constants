@@ -1,8 +1,5 @@
 defmodule Welcome2Constants do
-  def deck do
-    "../assets/decks.json"
-    |> Path.expand(__DIR__)
-    |> File.read!()
-    |> Poison.decode!(as: [%Card{}])
-  end
+  alias Welcome2Constants.Dealer
+  defdelegate start_link(), to: Dealer
+  defdelegate deck(agent), to: Dealer
 end
