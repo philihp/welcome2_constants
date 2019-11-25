@@ -13,6 +13,7 @@ defmodule Welcome2Constants.MixProject do
 
   def application do
     [
+      mod: {Welcome2Constants.Application, []},
       extra_applications: [:logger]
     ]
   end
