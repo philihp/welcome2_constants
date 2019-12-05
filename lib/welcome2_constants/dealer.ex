@@ -13,6 +13,5 @@ defmodule Welcome2Constants.Dealer do
     "../../assets/decks.json"
     |> Path.expand(__DIR__)
     |> File.read!()
-    |> Poison.decode!(as: [%Card{}])
   end
 end

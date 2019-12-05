@@ -19,8 +19,6 @@ defmodule Welcome2Constants.MixProject do
   end
 
   defp deps do
-    [
-      {:poison, "~> 3.1"}
-    ]
+    []
   end
 end
