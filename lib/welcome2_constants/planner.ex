@@ -10,8 +10,10 @@ defmodule Welcome2Constants.Planner do
   end
 
   defp read_plans do
-    "../../assets/plans.json"
-    |> Path.expand(__DIR__)
-    |> File.read!()
+    for n <- 1..3 do
+      "../../assets/plan#{n}.json"
+      |> Path.expand(__DIR__)
+      |> File.read!()
+    end
   end
 end
