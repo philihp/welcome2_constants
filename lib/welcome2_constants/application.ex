@@ -5,7 +5,8 @@ defmodule Welcome2Constants.Application do
     import Supervisor.Spec, warn: false
 
     children = [
-      worker(Welcome2Constants.Dealer, [])
+      worker(Welcome2Constants.Dealer, []),
+      worker(Welcome2Constants.Planner, [])
     ]
 
     options = [name: Welcome2Constants.Supervisor, strategy: :one_for_one]
